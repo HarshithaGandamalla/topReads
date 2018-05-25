@@ -1,19 +1,23 @@
 <section class="app flex-container" fxLayout="column" fxLayoutAlign="start stretch">
     <mat-toolbar color="primary" class="mat-elevation-z10">
-      Toolbar
+    <mat-icon>favorite</mat-icon>
+    Derek Zoolander's Center for Models Who Can't Find Love
     </mat-toolbar>
-  
-  <mat-drawer-container fxFlex class="example-container">
-  <mat-drawer mode="side"opened class="mat-elevation-z6">Drawer content</mat-drawer>
+  <mat-drawer-container fxFlex>
+  <mat-drawer mode="side"opened class="mat-elevation-z6">
+   <mat-grid-list cols="4" rowHeight="250px">
+    <mat-grid-tile
+       *ngFor="let book of books">
+         {{book.name}}
+<!-- <img src="assets/{{model.name}}.png" alt="model {{model.name}}">-->
+    </mat-grid-tile>
+    </mat-grid-list>
+    </mat-drawer>
   <mat-drawer-content>
-      
     <mat-tab-group class="demo-tab-group">
       <mat-tab label="Tab 1">
         <div class="demo-tab-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+        tortor in ultrices porttitor,
           orci enim rutrum enim, vel tempor sapien arcu a tellus.
         </div>
       </mat-tab>
@@ -27,8 +31,7 @@
         </div>  
       </mat-tab>  
       </mat-tab-group>
-   </mat-drawer-content>
-  
+    </mat-drawer-content>
 </mat-drawer-container>
 
 </section>
