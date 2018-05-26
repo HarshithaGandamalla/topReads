@@ -1,14 +1,14 @@
 <section class="app flex-container" fxLayout="column" fxLayoutAlign="start stretch">
     <mat-toolbar color="primary" class="mat-elevation-z10">
     <mat-icon>favorite</mat-icon>
-    Derek Zoolander's Center for Models Who Can't Find Love
+    Top 15 Reads
     </mat-toolbar>
   <mat-drawer-container fxFlex>
   <mat-drawer mode="side"opened class="mat-elevation-z6">
    <mat-grid-list cols="4" rowHeight="250px">
     <mat-grid-tile
        *ngFor="let book of books">
-         {{book.name}}
+         {{book.book_details[0].title}}
 <!-- <img src="assets/{{model.name}}.png" alt="model {{model.name}}">-->
     </mat-grid-tile>
     </mat-grid-list>

@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { BooksService } from './books.service';
+import { HttpService } from './http.service';
+import { HttpClientModule } from '@angular/common/http'; 
 
 
 @NgModule({
@@ -27,7 +29,7 @@ import { BooksService } from './books.service';
     MatIconModule,
     MatGridListModule  
   ],
-  providers: [BooksService],
+  providers: [BooksService,HttpService,HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
