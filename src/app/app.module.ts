@@ -12,6 +12,9 @@ import { MatGridListModule} from '@angular/material/grid-list';
 import { BooksService } from './books.service';
 import { HttpService } from './http.service';
 import { HttpClientModule } from '@angular/common/http'; 
+import { RouterModule, Routes } from '@angular/router';
+import { MatButtonModule} from '@angular/material/button';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -28,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatIconModule,
     MatGridListModule,
+    RouterModule,
+    MatButtonModule,
+    MatExpansionModule    
   ],
   providers: [BooksService,HttpService,HttpClientModule],
   bootstrap: [AppComponent]

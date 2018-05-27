@@ -1,0 +1,108 @@
+{
+ "kind": "books#volume",
+ "id": "WkE2DwAAQBAJ",
+ "etag": "bT1+oR+EFqQ",
+ "selfLink": "https://www.googleapis.com/books/v1/volumes/WkE2DwAAQBAJ",
+ "volumeInfo": {
+  "title": "The High Tide Club",
+  "subtitle": "A Novel",
+  "authors": [
+   "Mary Kay Andrews"
+  ],
+  "publisher": "St. Martin's Press",
+  "publishedDate": "2018-05-08",
+  "description": "\u003cp\u003e\u003cb\u003eFrom the \u003ci\u003eNew York Times\u003c/i\u003e bestselling author of \u003ci\u003eThe Weejust for you.” —\u003ci\u003eRT Book Reviews \u003c/i\u003e(Top Pick)\u003c/p\u003e\u003cp\u003e“Andrews’ novels...are \u003cb\u003ethe epitome of relaxing yet involving summer reads\u003c/b\u003e, and her latest is no exception.” —\u003ci\u003eBooklist\u003c/i\u003e\u003c/p\u003e",
+  "industryIdentifiers": [
+   {
+    "type": "ISBN_10",
+    "identifier": "1250126096"
+   },
+   {
+    "type": "ISBN_13",
+    "identifier": "9781250126092"
+   }
+  ],
+  "readingModes": {
+   "text": true,
+   "image": false
+  },
+  "pageCount": 448,
+  "printedPageCount": 488,
+  "printType": "BOOK",
+  "categories": [
+   "Fiction / Contemporary Women",
+   "Fiction / Romance / Contemporary"
+  ],
+  "averageRating": 4.5,
+  "ratingsCount": 8,
+  "maturityRating": "NOT_MATURE",
+  "allowAnonLogging": true,
+  "contentVersion": "1.2.2.0.preview.2",
+  "imageLinks": {
+   "smallThumbnail": "http://books.google.com/books/content?id=WkE2DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70JtWJhJWtO0EeEgYfQJM-GvALzeJWbMhlB-bPOlnq8glLWhNUQrhHZGVQWd5HeEIqApLpwoQw07i7m98SgvRcXiIkyGRyIDC1wTPScRYeUj-fqS2nBzxmKXPCG5n-xig5TnqYi&source=gbs_api",
+   "thumbnail": "http://books.google.com/books/content?id=WkE2DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE700lbjzoVetOlAHhkM9_uh0BbHs_ufizov21TwGZCjiRXtAkJre9pL3y9bxmj7BjHFYKF-HIw9xL5TrfvsBEafKirfKiFtJVbxViUk_DI_gyHo0Qsp6c4iHPhvc4jOV_HO0QvIQ&source=gbs_api",
+   "small": "http://books.google.com/books/content?id=WkE2DwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE7265fXdfsJIeBqzQ4ywrn0NvJwm6AJFn_g4bNXS0mfeDP0-Itxhhm-1Nn6e2XJ6_hOrnobW67idozNQ6uZiSdwCDkqcPtl36vFZ9ZEwqlRBfT2gIw_xImfxDvwKjKPiBG2NAnVT&source=gbs_api",
+   "medium": "http://books.google.com/books/content?id=WkE2DwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE73Q4wZY1UAMnifpdByWh1VtnqnvVfl4k9kz-92sRrkYG4iLu_flVhAASl2hDXKjtyDWH-E65mv2KLV0BaegxMNPuEW5ekKjQ-oiqv2H2nuz_n3hKFO6zcAO-kdleUcQ8lDK03DF&source=gbs_api",
+   "large": "http://books.google.com/books/content?id=WkE2DwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73yMk-0SaMhdgqflp1v3zd7khLKIo59NBEtms278FvccpZ-sOtR1-b17KEWFGCdG68tbbf_ol1-GC3tOy2WWVVfoCSSVv8hTucBZ2mGnQNJG-wcr02NkXCylzi5Kr0__0tqjueK&source=gbs_api",
+   "extraLarge": "http://books.google.com/books/content?id=WkE2DwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE73O-AHtkG6MsRvc6sqUk12vYtfTPddigfIhumK6ED_56OPsWJ4B9AdnEJWii4WmxwfK_mS2D-QMyHwEhYK-nMNIGd9omBXOXMShfPl_g9VkuBJ9tfta7OVFpqOA9Gm3VPE3_zkU&source=gbs_api"
+  },
+  "language": "en",
+  "previewLink": "http://books.google.com/books?id=WkE2DwAAQBAJ&hl=&source=gbs_api",
+  "infoLink": "https://play.google.com/store/books/details?id=WkE2DwAAQBAJ&source=gbs_api",
+  "canonicalVolumeLink": "https://market.android.com/details?id=book-WkE2DwAAQBAJ"
+ },
+ "layerInfo": {
+  "layers": [
+   {
+    "layerId": "geo",
+    "volumeAnnotationsVersion": "3"
+   }
+  ]
+ },
+ "saleInfo": {
+  "country": "US",
+  "saleability": "FOR_SALE",
+  "isEbook": true,
+  "listPrice": {
+   "amount": 14.99,
+   "currencyCode": "USD"
+  },
+  "retailPrice": {
+   "amount": 14.99,
+   "currencyCode": "USD"
+  },
+  "buyLink": "https://play.google.com/store/books/details?id=WkE2DwAAQBAJ&rdid=book-WkE2DwAAQBAJ&rdot=1&source=gbs_api",
+  "offers": [
+   {
+    "finskyOfferType": 1,
+    "listPrice": {
+     "amountInMicros": 1.499E7,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amountInMicros": 1.499E7,
+     "currencyCode": "USD"
+    },
+    "giftable": true
+   }
+  ]
+ },
+ "accessInfo": {
+  "country": "US",
+  "viewability": "PARTIAL",
+  "embeddable": true,
+  "publicDomain": false,
+  "textToSpeechPermission": "ALLOWED",
+  "epub": {
+   "isAvailable": true,
+   "acsTokenLink": "http://books.google.com/books/download/The_High_Tide_Club-sample-epub.acsm?id=WkE2DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+  },
+  "pdf": {
+   "isAvailable": false
+  },
+  "webReaderLink": "http://play.google.com/books/reader?id=WkE2DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+  "accessViewStatus": "SAMPLE",
+  "quoteSharingAllowed": false
+ }
+}
+
