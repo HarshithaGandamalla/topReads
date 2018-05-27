@@ -10,29 +10,38 @@ const api = require('./server/routes/api');
 
 const app = express();
 
-var books = [
-  { "title": "Hitchhiker's Guide to the Galaxy" },
-  { "title": "The Fellowship of the Ring" },
-  { "title": "Moby Dick" }
-];
-
-
-// Parsers for POST data
+//var books={};
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Point static path to public
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Set our api routes
 app.use('/api', api);
 
-
+    
 fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=7f0f22c09d544373bfccc451fa6f76bb', {
     method: 'get',
   })
-  .then(response => { return response.json(); })
-  .then(json => {console.log("Fetched on.."); console.log(json); });
+  .then(response => { return response.json()});
+
+    
+
+app.get('https://www.googleapis.com/books/v1/volumes', (req, res) => {
+    console.log("Query on.. "+req.query.q);
+    res.send("HEY!");
+//   fetch('https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + "&key=" + AIzaSyCAze_N32MeHmpoh5ZK7_6skpJPf5tVjmw, {method: 'get'})
+//                         .then(data => {data.json()
+//                         // console.log("Fetching images..");
+//                         // var img = data.json().items[0].volumeInfo.imageLinks.thumbnail;
+//                          //img = img.replace(/^http:\/\//i, 'https://');
+//                          })  
+//                          .catch(error=> {   
+//                            console.log(error);
+//                          }); 
+//                              
+//                       });
+});
+
 
  
 // Catch all other routes and return the index file

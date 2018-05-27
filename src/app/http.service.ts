@@ -17,6 +17,10 @@ export class HttpService {
     fetchTopReads(url:string) {
         return this.http.get(url).map(data=>data.json());
     }
+   
+   fetchCover(url:string) {
+        return this.http.get(url).map(data=>data.json());
+    }
 
 }
 

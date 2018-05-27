@@ -16,8 +16,8 @@ body {
     height: 100%;    
 }
 
-mat-drawer {
-    width: 60%;   
+mat-sidenav {
+    width: 40%;   
 }
 
 mat-toolbar {

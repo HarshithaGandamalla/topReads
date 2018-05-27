@@ -3,24 +3,31 @@
     <mat-icon>favorite</mat-icon>
     Top 15 Reads
     </mat-toolbar>
-  <mat-drawer-container fxFlex>
-  <mat-drawer mode="side"opened class="mat-elevation-z6">
+  <mat-sidenav-container fxFlex>
+  <mat-sidenav-content mode="side"opened class="mat-elevation-z6">
    <mat-grid-list cols="4" rowHeight="250px">
     <mat-grid-tile
        *ngFor="let book of books">
-         {{book.book_details[0].title}}
-<!-- <img src="assets/{{model.name}}.png" alt="model {{model.name}}">-->
+<!--         {{book.book_details[0].title}}-->
+         <img src={{book.imagePath}} alt="{{book.book_details[0].title}}">
+       <mat-grid-tile-footer>
+            <h3 mat-line>{{book.book_details[0].author}}</h3>
+            <span mat-line>{{book.book_details[0].description}}</span>
+            <button mat-icon-button (click)="showDetails(book)">
+                <mat-icon>info</mat-icon>
+            </button>
+        </mat-grid-tile-footer>
     </mat-grid-tile>
     </mat-grid-list>
-    </mat-drawer>
-  <mat-drawer-content>
+    </mat-sidenav-content>
+  <mat-sidenav  mode="side" align="end" class="mat-elevation-z6" #sidenav>
     <mat-tab-group class="demo-tab-group">
-      <mat-tab label="Tab 1">
+      <mat-tab label="Details">
         <div class="demo-tab-content">
-        tortor in ultrices porttitor,
-          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+         {{selectedBook?.book_details[0].description}}
         </div>
       </mat-tab>
+<!--
       <mat-tab label="Tab 2">
         <div class="demo-tab-content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
@@ -30,8 +37,9 @@
           orci enim rutrum enim, vel tempor sapien arcu a tellus.
         </div>  
       </mat-tab>  
+-->
       </mat-tab-group>
-    </mat-drawer-content>
-</mat-drawer-container>
+    </mat-sidenav>
+</mat-sidenav-container>
 
 </section>

@@ -7,8 +7,8 @@ import { MatTabsModule} from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatIconModule} from '@angular/material/icon';
+import { MatGridListModule} from '@angular/material/grid-list';
 import { BooksService } from './books.service';
 import { HttpService } from './http.service';
 import { HttpClientModule } from '@angular/common/http'; 
@@ -27,7 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatTabsModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatGridListModule  
+    MatGridListModule,
   ],
   providers: [BooksService,HttpService,HttpClientModule],
   bootstrap: [AppComponent]
