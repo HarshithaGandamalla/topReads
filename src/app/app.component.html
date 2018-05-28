@@ -1,7 +1,7 @@
 <section class="app flex-container" fxLayout="column" fxLayoutAlign="start stretch">
     <mat-toolbar color="primary" class="mat-elevation-z10">
     <mat-icon>favorite</mat-icon>
-    Top 12 Reads
+    The New York Times Best Sellers
     </mat-toolbar>
   <mat-sidenav-container fxFlex>
   <mat-sidenav-content mode="side"opened class="mat-elevation-z6">
@@ -20,32 +20,38 @@
     </mat-grid-list>
     </mat-sidenav-content>
    <mat-sidenav  mode="side" align="end" class="mat-elevation-z6" #sidenav>
-    <mat-tab-group class="demo-tab-group">
-      <mat-tab label="Details">
+    <mat-toolbar color="accent" class="mat-elevation-z10">
+     <mat-icon>home</mat-icon>
+       {{ selectedBook?.book_details[0].title}}
+       <sub>by{{ selectedBook?.book_details[0].author}}</sub>
+     </mat-toolbar>
         <div class="demo-tab-content">
-            <h4>{{selectedBook?.book_details[0].title}}</h4>
-             <h5>by {{selectedBook?.book_details[0].author}}</h5>
-            <a href={{selectedBook?.sample}} target="_blank"><button  mat-raised-button color="primary" >Read Sample</button></a>
+             <br>
+             <mat-chip-list>
+             <mat-chip color="primary" selected="true">{{selectedBook?.rank_last_week}} Rank Last Week </mat-chip>
+             <mat-chip color="accent" selected="true">{{selectedBook?.weeks_on_list}} Weeks on List </mat-chip>
+             </mat-chip-list>
+            <br>
+             <a href={{selectedBook?.buyLink}} target="_blank"><button  mat-raised-button color="primary" >Buy Now</button></a>
+             
+             <mat-chip> Price: {{selectedBook?.price.amount}} USD</mat-chip>
+
+             <a href={{selectedBook?.sample}} target="_blank"><button  mat-raised-button color="primary" >Read Sample</button></a>
             <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false">
            <mat-expansion-panel-header>
            <mat-panel-title>
-           Check Price
+             Summary
           </mat-panel-title>
           <mat-panel-description>
-             {{selectedBook?.price.amount}} USD
+             Click to read
           </mat-panel-description>
           </mat-expansion-panel-header>
-             <a href={{selectedBook?.buyLink}} target="_blank"><button  mat-raised-button color="primary" >Buy Now</button></a>
+            <summary>
+             {{selectedBook?.googleDesc}}
+            </summary>
          </mat-expansion-panel>      
         </div>  
-      </mat-tab>  
-            <mat-tab label="About">
-        <div class="demo-tab-content">
-         {{selectedBook?.googleDesc}}
-        </div>
-      </mat-tab>
-      </mat-tab-group>
   </mat-sidenav>
  </mat-sidenav-container>
 </section>

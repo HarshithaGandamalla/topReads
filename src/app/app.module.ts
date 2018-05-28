@@ -9,12 +9,12 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MatIconModule} from '@angular/material/icon';
 import { MatGridListModule} from '@angular/material/grid-list';
-import { BooksService } from './books.service';
 import { HttpService } from './http.service';
 import { HttpClientModule } from '@angular/common/http'; 
 import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule} from '@angular/material/button';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule} from '@angular/material/expansion';
+import { MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -33,9 +33,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatGridListModule,
     RouterModule,
     MatButtonModule,
-    MatExpansionModule    
+    MatExpansionModule,
+    MatChipsModule
   ],
-  providers: [BooksService,HttpService,HttpClientModule],
+  providers: [HttpService,HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

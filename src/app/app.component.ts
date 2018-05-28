@@ -1,7 +1,5 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
-import { BooksService } from './books.service';
 import { HttpService } from './http.service';
-import { Book } from './model';
 import { MatSidenav } from '@angular/material';
 
 
@@ -13,9 +11,10 @@ import { MatSidenav } from '@angular/material';
 export class AppComponent {
 
   books:any[]= [];
-  selectedBook: Book;
+  selectedBook: any;
   panelOpenState: boolean = false;
-
+  nytApiKey = '7f0f22c09d544373bfccc451fa6f76bb';
+  googleApiKey = 'AIzaSyCAze_N32MeHmpoh5ZK7_6skpJPf5tVjmw'; 
   @ViewChild('sidenav') sidenav: MatSidenav;
 
 
@@ -30,7 +29,7 @@ export class AppComponent {
       console.log("Get Books called");
       const that = this;
 
-      this.httpService.fetchTopReads("https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=7f0f22c09d544373bfccc451fa6f76bb").subscribe(  
+      this.httpService.fetchTopReads('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key='+this.nytApiKey).subscribe(  
         (data) => {  
                    this.books = data.results;
                    this.books.length=12;
@@ -44,7 +43,7 @@ export class AppComponent {
   }
 
  updateCover(id,index){
-      this.httpService.fetchCover('https://www.googleapis.com/books/v1/volumes?q=isbn:' + id + '&key=AIzaSyCAze_N32MeHmpoh5ZK7_6skpJPf5tVjmw').subscribe(data => { 
+      this.httpService.fetchCover('https://www.googleapis.com/books/v1/volumes?q=isbn:'+ id + '&key='+this.googleApiKey).subscribe(data => { 
             var img = data.items[0].volumeInfo.imageLinks.thumbnail;
             img = img.replace(/^http:\/\//i, 'https://');
             this.books[index].imagePath = img;
@@ -52,10 +51,7 @@ export class AppComponent {
             this.books[index].buyLink = data.items[0].saleInfo.buyLink;
             this.books[index].sample = data.items[0].accessInfo.webReaderLink;
             this.books[index].price = data.items[0].saleInfo.listPrice;
-//            this.books[index].lastWeekRank = book.rank_last_week;
-//            this.books[index].weeksOnList = book.weeks_on_list;
-
-       },
+           },
               err  => { console.log(err)},
               ()  =>  { console.log('done updating covers')}
                       
@@ -63,7 +59,7 @@ export class AppComponent {
  }
 
 
- showDetails(book: Book){
+ showDetails(book: any){
     this.selectedBook = book;
     console.log(JSON.stringify(book));
     this.sidenav.open();
